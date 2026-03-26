@@ -209,8 +209,9 @@
                         </a>
                     </div>
                     <div class="col-lg-8">
-                        <a href="img/a3.jpg" class="img-pop-home">
-                            <img class="img-fluid" src="img/a3.jpg" alt="">
+                        <!-- a3.jpg 자리 수정: Figma iframe 팝업 호출 버튼 -->
+                        <a href="#figma-popup" class="open-figma-popup">
+                            <img class="img-fluid" src="img/a3.jpg" alt="Figma Artwork">
                         </a>
                         <div class="row">
                             <div class="col-lg-6">
@@ -447,6 +448,16 @@
         </footer>
         <!-- End footer Area -->
 
+        <!-- Figma Iframe 팝업 컨테이너 (평상시에는 mfp-hide 클래스로 숨겨짐) -->
+        <div id="figma-popup" class="mfp-hide"
+            style="max-width: 1200px; margin: 0 auto; background: #fff; padding: 40px 20px 20px; position: relative; border-radius: 8px;">
+            <!-- 모바일에서의 반응형을 위해 너비를 100%로 주었습니다 -->
+            <iframe
+                style="display:block; margin: 0 auto; border: 1px solid rgba(0, 0, 0, 0.1); width: 80%; height: 750px;"
+                src="https://embed.figma.com/proto/dYojsEitCjHDS5MHzbCnR8/BusanMate-Kakao-Ad?page-id=0%3A1&node-id=1-383&p=f&viewport=671%2C60%2C0.5&scaling=scale-down&content-scaling=fixed&embed-host=share"
+                allowfullscreen></iframe>
+        </div>
+
         <script src="js/vendor/jquery-2.2.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -469,6 +480,7 @@
         <script src="js/main.js"></script>
         <script src="js/gallery.js"></script>
         <script src="js/video.js"></script>
+        <script src="js/figma.js"></script>
 </body>
 
 </html>
